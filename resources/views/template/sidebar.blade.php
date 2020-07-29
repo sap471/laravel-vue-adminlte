@@ -19,7 +19,7 @@
                 <i class="text-white p-2 fas fa-user"></i>
             </div>
             <div class="info">
-                <a href="#" class="d-block">Alexander Pierce</a>
+                <a href="#" class="d-block">{{ Auth::user()->name }}</a>
             </div>
         </div>
 
