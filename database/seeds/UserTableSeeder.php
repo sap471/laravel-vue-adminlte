@@ -1,0 +1,21 @@
+<?php
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+class UserTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        DB::create([
+            'name' => 'Administrator',
+            'email' => 'admin@localhost.id',
+            'password' => 'password'
+        ]);
+    }
+}
