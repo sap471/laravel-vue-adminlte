@@ -11,20 +11,18 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <link rel="stylesheet" href="{{ mix('css/adminlte.css') }}">
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 
-<body class="sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed @yield('bodyClass')">
-    <div class="wrapper" id="app">
-        @include('template.navigation')
-        @include('template.sidebar')
-        @include('template.content-wrapper')
-        @include('template.footer');
-        @include('template.control-sidebar')
+<body class="hold-transition login-page">
+    <div class="login-box">
+        <div class="login-logo">
+            <span>{{ config('app.name', 'Laravel') }}</span>
+        </div>
+        @yield('content')
     </div>
 
     <script src="{{ mix('js/adminlte.js') }}"></script>
-    <script src="{{ mix('js/app.js') }}"></script>
+    @yield('javascript')
 </body>
 
 </html>
